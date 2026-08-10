@@ -12,29 +12,37 @@ const ExternalIcon = () => (
 const Projects = () => {
   const allProjects = [
     {
-      title: "Phishing URL Detection Tool",
-      desc: "Developed a full-stack security application to analyze URLs for potential phishing threats using VirusTotal API (60+ security engines) and custom heuristic logic.",
+      title: "Sentinel: Security Log Analyzer",
+      desc: "Built a SOC dashboard to detect Brute Force, Port Scans, and Unauthorized Access via log heuristic analysis and Regex-based parsing.",
       points: [
-        "Dynamic risk scoring system (0-100)",
-        "Integrated real-time VirusTotal intelligence",
-        "Persistent analysis history with MongoDB Atlas"
+        "Real-time alerts using Socket.io",
+        "Risk scoring system (0-100)",
+        "Automated PDF/CSV security reporting"
       ],
-      tech: ["Node.js", "Express", "MongoDB", "VirusTotal API"],
-      link: "https://github.com/MdRifatRayhan/Phishing-URL-Detector-Pro" // তোমার প্রজেক্টের লিঙ্ক এখানে দাও
+      tech: ["Node.js", "Socket.io", "MongoDB", "Chart.js"],
+      link: "https://github.com/MdRifatRayhan/my-security-dashboard"
     },
     {
-      title: "Secure Campus Network",
-      desc: "Simulated campus network architecture with VLAN segmentation and firewall rules using Packet Tracer.",
-      points: ["VLAN Configuration", "Firewall Rules", "Traffic Routing"],
-      tech: ["Cisco Packet Tracer", "Networking"],
-      link: "#"
+      title: "SecureVault Authentication System",
+      desc: "A secure full-stack authentication system with OTP verification and JWT-based protection for enhanced application security.",
+      points: [
+        "CSRF protection & Password hashing",
+        "Login attempt limiter (Rate Limiting)",
+        "Login activity tracking & OTP system"
+      ],
+      tech: ["Express.js", "JWT", "bcrypt", "MongoDB Atlas"],
+      link: "https://github.com/MdRifatRayhan/securevault-auth-system"
     },
     {
-      title: "Linux Home Server",
-      desc: "Configuration of a headless Ubuntu server featuring Nginx reverse proxy and secure SSH access.",
-      points: ["Nginx Setup", "SSH Hardening", "Reverse Proxy"],
-      tech: ["Linux", "Ubuntu", "Nginx"],
-      link: "#"
+      title: "Phishing URL Detection Tool",
+      desc: "Full-stack security application analyzing URLs for phishing threats using VirusTotal API and custom heuristic patterns.",
+      points: [
+        "60+ security engines integration",
+        "IP-based hosting analysis",
+        "Persistent analysis history"
+      ],
+      tech: ["Node.js", "VirusTotal API", "MongoDB", "Axios"],
+      link: "https://github.com/MdRifatRayhan/Phishing-URL-Detector-Pro"
     }
   ];
 
@@ -47,7 +55,7 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allProjects.map((project, index) => (
-            <div key={index} className="group p-8 rounded-2xl bg-[#0b0d18] border border-white/10 hover:border-[#00f2fe]/40 transition-all flex flex-col">
+            <div key={index} className="group p-8 rounded-2xl bg-[#0b0d18] border border-white/10 hover:border-[#00f2fe]/40 transition-all flex flex-col h-full">
               <div className="flex justify-between items-start mb-6">
                 <FolderIcon />
                 <a href={project.link} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#00f2fe] transition-colors">
@@ -55,11 +63,11 @@ const Projects = () => {
                 </a>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00f2fe] transition-colors">{project.title}</h3>
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.desc}</p>
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00f2fe] transition-colors line-clamp-1">{project.title}</h3>
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-3">{project.desc}</p>
               
               {/* Bullet Points */}
-              <ul className="mb-6 space-y-1">
+              <ul className="mb-6 space-y-1 flex-grow">
                 {project.points.map((point, i) => (
                   <li key={i} className="text-[12px] text-gray-500 flex items-center gap-2">
                     <span className="w-1 h-1 bg-[#00f2fe] rounded-full"></span> {point}
