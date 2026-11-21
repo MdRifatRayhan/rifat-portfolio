@@ -1,47 +1,36 @@
 import React from 'react';
+import { Terminal } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 px-4 bg-[#05060f]">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-        {/* Profile Image Section */}
-        <div className="md:w-1/2 relative">
-          <div className="w-64 h-64 md:w-80 md:h-80 mx-auto relative z-10">
-            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#00f2fe]/20 to-[#7000ff]/20 border border-white/10 flex items-center justify-center overflow-hidden">
-              {/* Replace the URL below with your actual image path later */}
-              <img 
-  src="/profile.png" 
-  alt="Md. Rifat Rayhan" 
-  className="w-full h-full object-cover" 
-/>
+    <section id="about" className="py-24 bg-surface/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4 sticky top-24 h-fit">
+            <h2 className="text-3xl font-bold text-white mb-4">Professional Story</h2>
+            <div className="h-1 w-20 bg-primary mb-6"></div>
+            <div className="p-6 bg-surface border border-white/5 rounded-2xl">
+              <Terminal className="text-primary mb-4" />
+              <p className="text-xs font-mono text-muted uppercase leading-relaxed">
+                Seeking an entry-level Network Engineer role to apply practical routing, switching, and observability skills in production.
+              </p>
             </div>
-            {/* Animated background frame */}
-            <div className="absolute -inset-4 border border-[#00f2fe]/30 rounded-2xl -z-10 translate-x-4 translate-y-4"></div>
           </div>
-        </div>
-
-        {/* Text Content Section */}
-        <div className="md:w-1/2">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="h-[1px] w-8 bg-[#00f2fe]"></div>
-            <span className="text-[#00f2fe] font-mono text-sm tracking-widest uppercase">About Me</span>
-          </div>
-          <h2 className="text-4xl font-bold mb-6 text-white tracking-tight">Who is Rifat?</h2>
-          <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
-            <p>
-              I am a dedicated student and technology enthusiast currently immersing myself in the world of 
-              <strong className="text-white"> Network Engineering and Cybersecurity</strong>. My journey is driven by a deep curiosity 
-              about how data moves securely across the globe.
-            </p>
-            <p>
-              With a solid foundation in <strong className="text-white">Linux (Ubuntu & Kali)</strong> and networking fundamentals, I enjoy 
-              solving complex problems and building secure virtual environments. I believe that understanding 
-              the underlying infrastructure is the key to mastering security.
-            </p>
-            <p>
-              Whether it's configuring routers, subnetting complex networks, or exploring vulnerabilities, 
-              I approach every challenge with a <strong className="text-[#00f2fe]">"Security-First"</strong> mindset.
-            </p>
+          <div className="lg:col-span-8">
+            <div className="space-y-6 text-muted text-lg leading-relaxed">
+              <p className="text-xl text-gray-300">
+                I am a Computer Science and Engineering graduate (2026) specializing in{' '}
+                <span className="text-white font-semibold">
+                  Network Engineering, Packet-Level Troubleshooting, Real-Time Infrastructure Monitoring, and Network Security.
+                </span>
+              </p>
+              <p>
+                My practical experience includes designing and configuring resilient three-tier hierarchical networks, diagnosing complex network incidents using structured Root Cause Analysis, implementing routing and switching protocols, and deploying containerized network monitoring solutions with Zabbix and SNMP.
+              </p>
+              <p>
+                I enjoy working with Cisco networking technologies, Linux environments, Wireshark, and security tools. I am actively preparing for entry-level opportunities in Network Engineering where I can ensure infrastructure availability and performance.
+              </p>
+            </div>
           </div>
         </div>
       </div>

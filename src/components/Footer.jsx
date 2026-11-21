@@ -1,19 +1,10 @@
 import React from 'react';
-
-const Footer = () => {
-  return (
-    <footer className="py-12 border-t border-white/5 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} Md. Rifat Rayhan. All rights reserved.
-        </p>
-        <div className="flex gap-8 text-xs font-mono text-gray-600 uppercase tracking-widest">
-          <span>Encrypted Transmission</span>
-          <span>Security-First Portfolio</span>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
+const Footer = () => (
+  <footer className="py-12 bg-[#0a0f1c] border-t border-white/5 text-center">
+    <div className="max-w-7xl mx-auto px-4">
+      <p className="text-sm text-muted mb-2">© {new Date().getFullYear()} Md. Rifat Rayhan. All rights reserved.</p>
+      <p className="text-[10px] font-mono text-gray-600 uppercase tracking-[0.3em]">Engineered for Resilience</p>
+    </div>
+  </footer>
+);
 export default Footer;
